@@ -51,9 +51,9 @@ class HookOpenFL implements IHookPlatform
 					packageName = Lib.packageName;
 					version = Lib.version;
 				#else
-					fileName = Application.current.config.file;
-					packageName = Application.current.config.packageName;
-					version = Application.current.config.version;
+                    fileName = Application.current.meta.get("file");
+					packageName = Application.current.meta.get("packageName");
+					version = Application.current.meta.get("version");
 				#end
 			#end
 		#else
